@@ -21,12 +21,12 @@ function autoGrillFire() {
     }
 }
 
-function slider() {
+function grillAnimation() {
     $(grillImg[0]).addClass('show');
 
     setInterval('autoGrillFire()', 200);
 }
 
 $(document).ready(function () {
-    slider();
+    grillAnimation();
 });
