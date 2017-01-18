@@ -1,4 +1,7 @@
 .grill-img{
-	height: 616px;
-	width: 450px;
+	display: none;
+}
+
+.show{
+	display: block;
 }
