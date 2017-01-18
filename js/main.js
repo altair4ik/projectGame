@@ -24,7 +24,7 @@ function autoGrillFire() {
 function grillAnimation() {
     $(grillImg[0]).addClass('show');
 
-    setInterval('autoGrillFire()', 200);
+    setInterval('autoGrillFire()', 400);
 }
 
 $(document).ready(function () {
