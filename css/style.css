@@ -23,6 +23,12 @@
 .smoke{
     z-index: 5;
     opacity: 0;
+    filter: brightness(1);
+    transition: filter 5s ease;
+}
+
+.smoke-wrapper{
+
 }
 
 .food-first-img{
