@@ -5,16 +5,18 @@ function Steak() {
 
     this.create = function () {
         $('body').append("<div class='steak'>" +
-            "<img src='img/steak.png' class='steak-img food-first-img'>" +
-            "<img src='img/steak2.png' class='steak-img food-second-img'>" +
-            "<img src='img/steak3.png' class='steak-img food-thread-img'>" +
-            "<img src='img/steak4.png' class='steak-img food-fourth-img'>" +
+            "<div class='steak-vibro'>" +
+                "<img src='img/steak.png' class='steak-img food-first-img'>" +
+                "<img src='img/steak2.png' class='steak-img food-second-img'>" +
+                "<img src='img/steak3.png' class='steak-img food-thread-img'>" +
+                "<img src='img/steak4.png' class='steak-img food-fourth-img'>" +
+            "</div>>"+
             "</div>");
         steakImages = $('.steak-img');
         $(steakImages[0]).animate({opacity : '1'},3000)
     };
-    this.go = function () {
-
+    this.goToGrill = function () {
+        $('.steak').animate({'top' : '210px', 'left' : '210px'}, 1000);
     };
     this.fry = function () {
         if(rotateCheck) {
@@ -31,16 +33,16 @@ function Steak() {
         $(steakImages[1]).css('opacity', '0');
         $(steakImages[2]).css('opacity', '1');
 
-
         return rotateCheck = true;
     };
 
     this.vibrateOn = function () {
-        $('.steak').addClass('vibro');
+        $('.steak-vibro').jrumble();
+        $('.steak-vibro').trigger('startRumble');
     };
 
     this.vibrateOff = function () {
-        $('.steak').removeClass('vibro');
+        $('.steak-vibro').trigger('stopRumble');
     };
     this.out = function () {
 
