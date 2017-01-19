@@ -20,6 +20,11 @@
     position: absolute;
 }
 
+.smoke{
+    z-index: 5;
+    opacity: 0;
+}
+
 .food-first-img{
     z-index: 4;
 }

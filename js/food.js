@@ -6,6 +6,7 @@ function Steak() {
     this.create = function () {
         $('body').append("<div class='steak'>" +
             "<div class='steak-vibro'>" +
+                "<img src='img/smoke.png' class='steak-img smoke'>" +
                 "<img src='img/steak.png' class='steak-img food-first-img'>" +
                 "<img src='img/steak2.png' class='steak-img food-second-img'>" +
                 "<img src='img/steak3.png' class='steak-img food-thread-img'>" +
@@ -13,7 +14,7 @@ function Steak() {
             "</div>>"+
             "</div>");
         steakImages = $('.steak-img');
-        $(steakImages[0]).animate({opacity : '1'},3000)
+        $(steakImages[1]).animate({opacity : '1'},3000)
     };
     this.goToGrill = function () {
         $('.steak').animate({'top' : '210px', 'left' : '210px'}, 1000);
@@ -44,6 +45,16 @@ function Steak() {
     this.vibrateOff = function () {
         $('.steak-vibro').trigger('stopRumble');
     };
+
+    this.smokeOn = function () {
+        $('.smoke').animate({'opacity' : '1'}, 1000);
+        $('.smoke').animate({'filter' : 'brightness(0)'}, 3000);
+    };
+
+    this.smokeOff = function () {
+        $('.smoke').animate({'opacity' : '0'}, 3000)
+    }
+
     this.out = function () {
 
     };
