@@ -7,9 +7,33 @@
 }
 
 .steak{
+    display: block;
+    width: 365px;
+    height: 255px;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
+}
+
+.steak-img{
+    opacity: 0;
+    position: absolute;
+}
+
+.food-first-img{
+    z-index: 4;
+}
+
+.food-second-img{
+    z-index: 3;
+}
+
+.food-thread-img{
+    z-index: 2;
+}
+
+.food-fourth-img{
+    z-index: 1;
 }
