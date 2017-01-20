@@ -1,3 +1,7 @@
+.grill{
+    position: relative;
+}
+
 .grill-img{
 	display: none;
 }
@@ -12,8 +16,7 @@
     width: 365px;
     height: 255px;
     position: absolute !important;
-    top: 0;
-    left: 0;
+    transition: top 0.5s ease, left 0.5s ease;
 }
 
 .steak-img:first-child{

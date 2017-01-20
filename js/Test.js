@@ -1,18 +1,18 @@
 var steakImages;
 
-function Steak() {
+function Test() {
     var fryCheck = false,
         id = 0,
-        food = 'steak',
+        food = 'test',
         foodId = food + id++;
 
     this.create = function () {
         $('div.grill').append("<div class='steak' id='" + foodId + "'>" +
             "<div class='steak-images'>" +
-                "<img src='img/steak.png' class='steak-img food-first-img'>" +
-                "<img src='img/steak2.png' class='steak-img food-second-img'>" +
-                "<img src='img/steak3.png' class='steak-img food-thread-img'>" +
-                "<img src='img/steak4.png' class='steak-img food-fourth-img'>" +
+            "<img src='img/steak.png' class='steak-img food-first-img'>" +
+            "<img src='img/steak2.png' class='steak-img food-second-img'>" +
+            "<img src='img/steak3.png' class='steak-img food-thread-img'>" +
+            "<img src='img/steak4.png' class='steak-img food-fourth-img'>" +
             "</div>"+
             "</div>");
         steakImages = $('.steak-img');
