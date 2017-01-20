@@ -7,12 +7,17 @@
 }
 
 .steak{
+    opacity: 0;
     display: block;
     width: 365px;
     height: 255px;
     position: absolute !important;
     top: 0;
     left: 0;
+}
+
+.steak-img:first-child{
+    opacity: 1;
 }
 
 .steak-img{
@@ -24,7 +29,7 @@
     z-index: 5;
     opacity: 0;
     filter: brightness(1);
-    transition: filter 5s ease;
+    transition: filter 4s ease;
 
 }
 
