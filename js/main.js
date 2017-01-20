@@ -28,5 +28,46 @@ function grillAnimation() {
 }
 
 $(document).ready(function () {
+    var a = new Steak();
     grillAnimation();
+
+    //testMenu
+    $('#aAdd').click(function () {
+
+        a.create();
+        a.goToGrill();
+    })
+
+    $('#aMoveIn').click(function () {
+
+        a.goToGrill();
+    })
+
+    $('#aFry').click(function () {
+
+        a.fry();
+    })
+
+    $('#aVibrate').click(function () {
+
+        a.vibrate();
+    })
+
+    $('#aSmoke').click(function () {
+
+        a.smoke();
+    })
+
+    $('#aRotate').click(function () {
+
+        a.rotate();
+    })
+
+    $('#aOut').click(function () {
+
+        a.out();
+    })
+
+
+
 });

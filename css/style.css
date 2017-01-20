@@ -1,3 +1,19 @@
+.test-menu{
+    margin-left: 400px;
+    border: 1px solid black;
+    font-size: 40px;
+}
+
+.test-menu > ul > li{
+    display: inline-block;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+
+
+
+
 .grill{
     position: relative;
 }

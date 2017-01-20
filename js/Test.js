@@ -1,5 +1,7 @@
 var steakImages;
 
+
+
 function Test() {
     var fryCheck = false,
         id = 0,
