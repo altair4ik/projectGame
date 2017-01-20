@@ -25,10 +25,14 @@
     opacity: 0;
     filter: brightness(1);
     transition: filter 5s ease;
+
 }
 
 .smoke-wrapper{
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: top 4s ease, left 4s ease;
 }
 
 .food-first-img{

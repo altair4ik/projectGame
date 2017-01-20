@@ -11,7 +11,7 @@ function Steak() {
                 "<img src='img/steak4.png' class='steak-img food-fourth-img'>" +
             "</div>"+
                 "<div class='smoke-wrapper'>"+
-                "<img src='img/smoke.png' class='steak-img smoke'>" +
+                    "<img src='img/smoke.png' class='steak-img smoke'>" +
                 "</div>" +
             "</div>");
         steakImages = $('.steak-img');
@@ -40,7 +40,6 @@ function Steak() {
     this.vibrateOn = function () {
         $('.steak-images').jrumble();
         $('.steak-images').trigger('startRumble');
-        $('.smoke').css('filter', 'brightness(0)');
     };
 
     this.vibrateOff = function () {
@@ -49,13 +48,26 @@ function Steak() {
 
     this.smokeOn = function () {
         $('.smoke').animate({'opacity' : '1'}, 1000);
-        $('.smoke').animate({'filter' : 'brightness(0)'}, 3000);
-        $('.smoke').css('filter', 'brightness(1)');
+
+        $('.smoke').jrumble({
+            x: 1,
+            y: 1,
+            rotation: 0
+        });
+        $('.smoke').trigger('startRumble');
+
+        $('.smoke').css('filter', 'brightness(0)');
+        $('.smoke-wrapper').css('top', '-150px');
+        $('.smoke-wrapper').css('left', '150px');
     };
 
     this.smokeOff = function () {
-        $('.smoke').animate({'opacity' : '0'}, 3000)
-    }
+        $('.smoke').trigger('stopRumble');
+        $('.smoke').animate({'opacity' : '0'}, 2000);
+        $('.smoke-wrapper').css('top', '0');
+        $('.smoke-wrapper').css('left', '0');
+
+    };
 
     this.out = function () {
 
